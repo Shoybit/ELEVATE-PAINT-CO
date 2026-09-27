@@ -113,7 +113,7 @@ export const Projects: React.FC<ProjectsProps> = ({
           >
             {/* After Image — FULL visible, no crop */}
             <img
-              src="../../after.png"
+              src="/after.png"
               alt="After Paint Restoration"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               draggable={false}
@@ -124,7 +124,7 @@ export const Projects: React.FC<ProjectsProps> = ({
 
             {/* Before Image — same contain, clipped */}
             <img
-              src="../../before.png"
+              src="/before.png"
               alt="Before Restoration"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               draggable={false}

@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
               className="flex items-center group cursor-pointer border-none bg-transparent p-0"
             >
               <img
-                src="../../footer logo.png"
+                src="/footer logo.png"
                 alt="Elevate Paint Co. Logo"
                 className="h-10 sm:h-14 w-auto object-contain transition-transform "
               />

@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   className="flex items-center group cursor-pointer border-none bg-transparent p-0"
 >
   <img 
-    src="../../logo.png" 
+    src="/logo.png" 
     alt="Elevate Paint Co. Logo" 
     className="h-10 sm:h-14 w-auto object-contain transition-transform "
   />
