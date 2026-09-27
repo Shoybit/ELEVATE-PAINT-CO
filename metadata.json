@@ -1,0 +1,6 @@
+{
+  "name": "Painter Contractors - Professional Painting Services",
+  "description": "Premium residential and commercial painting contractor with certified craftsmanship, upfront transparent pricing, and 5-year warranty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
