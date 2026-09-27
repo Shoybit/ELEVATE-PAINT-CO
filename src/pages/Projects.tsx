@@ -119,7 +119,7 @@ export const Projects: React.FC<ProjectsProps> = ({
               draggable={false}
             />
             <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg z-10 shadow-md">
-              AFTER · Emerald Finish
+              AFTER
             </div>
 
             {/* Before Image — same contain, clipped */}
@@ -133,7 +133,7 @@ export const Projects: React.FC<ProjectsProps> = ({
               }}
             />
             <div className="absolute top-4 left-4 bg-[#131c2b]/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md z-10">
-              BEFORE · Weathered
+              BEFORE 
             </div>
 
             {/* Divider Line & Handle */}
