@@ -18,10 +18,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-tertiary-container/40 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div className="max-w-10/12 mx-auto px-6 lg:px-12 pt-16 pb-10 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+      <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12 pt-12 sm:pt-16 pb-8 sm:pb-10 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-10 sm:mb-12">
           {/* Brand Col */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 flex flex-col items-start text-left">
             <button
               onClick={() => handleNav("home")}
               className="flex items-center group cursor-pointer border-none bg-transparent p-0"
@@ -29,10 +29,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
               <img
                 src="/footer logo.png"
                 alt="Elevate Paint Co. Logo"
-                className="h-10 sm:h-14 w-auto object-contain transition-transform "
+                className="h-10 sm:h-12 lg:h-14 w-auto object-contain transition-transform"
               />
             </button>
-            <p className="text-[15px] text-primary-fixed-dim mb-6 max-w-sm leading-relaxed">
+            <p className="text-[15px] text-primary-fixed-dim mb-6 max-w-sm leading-relaxed mt-4">
               Transforming homes and businesses with certified painting
               excellence since 2012
             </p>
@@ -219,11 +219,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLegal }) => {
         </div>
 
         {/* Bottom Legal Bar */}
-        <div className="pt-6 border-t border-inverse-surface flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-on-primary-container">
+        <div className="pt-6 border-t border-inverse-surface flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4 text-[13px] text-on-primary-container text-left">
           <p className="m-0">
             © 2024 Painter Services Contractor. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-start gap-4 sm:gap-6">
             <button
               onClick={() => onOpenLegal?.("Privacy Policy")}
               className="hover:text-surface transition-colors bg-transparent border-none p-0 text-[13px] text-on-primary-container cursor-pointer"

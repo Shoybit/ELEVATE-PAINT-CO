@@ -12,17 +12,17 @@ export const AboutUs: React.FC<AboutUsProps> = ({
   onRequestQuote,
 }) => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden pt-10 pb-16 lg:pb-24 bg-surface">
+      <section className="relative w-full overflow-hidden pt-24 sm:pt-28 lg:pt-10 pb-16 lg:pb-24 bg-surface">
         <div className="absolute top-12 right-0 w-[550px] h-[550px] bg-secondary-container/15 rounded-full blur-3xl pointer-events-none -z-10 translate-x-1/3"></div>
         <div className="absolute top-48 left-10 w-72 h-72 bg-surface-container-highest/40 rounded-full blur-2xl pointer-events-none -z-10"></div>
 
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12 lg:py-20">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Text Column */}
             <div className="lg:col-span-6 flex flex-col items-start">
-              <h1 className="text-[40px] leading-[48px] lg:text-[56px] lg:leading-[64px] font-extrabold text-on-surface tracking-tight mb-4">
+              <h1 className="text-[28px] leading-[36px] sm:text-[40px] sm:leading-[48px] lg:text-[56px] lg:leading-[64px] font-extrabold text-on-surface tracking-tight mb-4">
                 Built on Quality.{" "} <br />
                 <span className="text-secondary-container ">
                   Trusted by People.
@@ -41,7 +41,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                   </svg>
                 </span>
               </h1>
-              <p className="text-[18px] text-on-surface-variant max-w-xl mb-8 leading-relaxed">
+              <p className="text-[16px] sm:text-[18px] text-on-surface-variant max-w-xl mb-8 leading-relaxed">
                 We believe great painting is more than applying color. It is
                 about craftsmanship, obsessive attention to detail, reliable
                 timelines, and creating vibrant spaces people truly love to live
@@ -51,7 +51,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({
               <div className="flex flex-wrap items-center gap-4">
                 <a
                   href="#our-story"
-                  className="inline-flex items-center justify-center gap-2.5 bg-secondary-container text-on-secondary-container text-[14px] font-bold px-7 py-3.5 rounded-full hover:bg-secondary-fixed transition-all shadow-[0_10px_25px_-5px_rgba(11,25,44,0.12)] hover:-translate-y-0.5 group no-underline"
+                  className="inline-flex items-center justify-center gap-2.5 bg-secondary-container text-on-secondary-container text-[14px] font-bold px-6 sm:px-7 py-3.5 rounded-full hover:bg-secondary-fixed transition-all shadow-[0_10px_25px_-5px_rgba(11,25,44,0.12)] hover:-translate-y-0.5 group no-underline"
                 >
                   <span>Explore Our Story</span>
                   <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">
@@ -60,7 +60,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                 </a>
                 <button
                   onClick={() => onNavigate("projects")}
-                  className="inline-flex items-center justify-center gap-2.5 bg-surface-container text-on-surface text-[14px] font-bold px-6 py-3.5 rounded-full hover:bg-surface-container-high transition-all cursor-pointer border-none"
+                  className="inline-flex items-center justify-center gap-2.5 bg-surface-container text-on-surface text-[14px] font-bold px-5 sm:px-6 py-3.5 rounded-full hover:bg-surface-container-high transition-all cursor-pointer border-none"
                 >
                   <span className="material-symbols-outlined text-lg text-secondary">
                     palette
@@ -70,15 +70,15 @@ export const AboutUs: React.FC<AboutUsProps> = ({
               </div>
 
               {/* Trust Sub-badge */}
-              <div className="mt-8 pt-4 flex items-center gap-4">
+              <div className="mt-8 pt-4 flex items-center gap-3 sm:gap-4">
                 <div className="flex -space-x-2.5">
-                  <div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container text-[12px] font-bold shadow-sm ring-2 ring-surface">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container text-[11px] sm:text-[12px] font-bold shadow-sm ring-2 ring-surface">
                     JC
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface text-[12px] font-bold shadow-sm ring-2 ring-surface">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface text-[11px] sm:text-[12px] font-bold shadow-sm ring-2 ring-surface">
                     ER
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary text-[12px] font-bold shadow-sm ring-2 ring-surface">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary text-[11px] sm:text-[12px] font-bold shadow-sm ring-2 ring-surface">
                     MV
                   </div>
                 </div>
@@ -93,11 +93,11 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                         star
                       </span>
                     ))}
-                    <span className="text-[14px] font-bold text-on-surface ml-1">
+                    <span className="text-[13px] sm:text-[14px] font-bold text-on-surface ml-1">
                       4.9 / 5.0
                     </span>
                   </div>
-                  <p className="text-[13px] text-on-surface-variant m-0">
+                  <p className="text-[12px] sm:text-[13px] text-on-surface-variant m-0">
                     Backed by 500+ verified residential &amp; commercial reviews
                   </p>
                 </div>
@@ -110,40 +110,40 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                 <div className="absolute -top-6 -right-6 w-full h-full bg-secondary-container/20 rounded-[2.5rem] transform rotate-3 -z-10"></div>
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl bg-surface-container-lowest">
                   <img
-                    className="w-full h-[460px] lg:h-[520px] object-cover hover:scale-105 transition-transform duration-700"
+                    className="w-full h-[320px] sm:h-[460px] lg:h-[520px] object-cover hover:scale-105 transition-transform duration-700"
                     alt="Professional painter with roller working on interior wall"
                     src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop"
                   />
 
                   {/* Floating Detail Card */}
-                  <div className="absolute top-6 left-6 bg-surface/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
-                      <span className="material-symbols-outlined text-xl">
+                  <div className="absolute top-4 sm:top-6 left-4 sm:left-6 bg-surface/95 backdrop-blur-md px-3 sm:px-4 py-2 sm:py-3 rounded-2xl shadow-lg flex items-center gap-2 sm:gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
+                      <span className="material-symbols-outlined text-lg sm:text-xl">
                         verified
                       </span>
                     </div>
                     <div>
-                      <p className="text-[11px] text-on-surface-variant m-0">
+                      <p className="text-[10px] sm:text-[11px] text-on-surface-variant m-0">
                         Licensed &amp; Bonded
                       </p>
-                      <p className="text-[14px] text-on-surface font-bold m-0">
+                      <p className="text-[13px] sm:text-[14px] text-on-surface font-bold m-0">
                         100% Guaranteed
                       </p>
                     </div>
                   </div>
 
                   {/* Floating 15+ Years Badge */}
-                  <div className="absolute bottom-6 right-6 bg-primary-container text-surface px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary-container">
-                      <span className="material-symbols-outlined text-3xl">
+                  <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 bg-primary-container text-surface px-4 sm:px-6 py-3 sm:py-4 rounded-2xl shadow-2xl flex items-center gap-3 sm:gap-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary-container shrink-0">
+                      <span className="material-symbols-outlined text-2xl sm:text-3xl">
                         workspace_premium
                       </span>
                     </div>
                     <div>
-                      <div className="text-[28px] text-secondary-container font-extrabold leading-none">
+                      <div className="text-[22px] sm:text-[28px] text-secondary-container font-extrabold leading-none">
                         10+ Years
                       </div>
-                      <p className="text-[11px] text-primary-fixed-dim tracking-wider uppercase mt-1 m-0">
+                      <p className="text-[10px] sm:text-[11px] text-primary-fixed-dim tracking-wider uppercase mt-1 m-0">
                         Of Unbroken Trust
                       </p>
                     </div>
@@ -157,8 +157,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({
 
       {/* Four Pillars Key Highlights Ribbon */}
       <section className="w-full py-4 bg-surface">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12">
-          <div className="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-[0_10px_30px_-5px_rgba(11,25,44,0.06)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
+          <div className="bg-surface-container-lowest rounded-3xl p-5 sm:p-6 lg:p-8 shadow-[0_10px_30px_-5px_rgba(11,25,44,0.06)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             <div className="flex items-center gap-4 p-2">
               <div className="w-12 h-12 rounded-2xl bg-secondary-container/15 flex items-center justify-center text-secondary shrink-0">
                 <span className="material-symbols-outlined text-2xl">
@@ -226,20 +226,20 @@ export const AboutUs: React.FC<AboutUsProps> = ({
 
       {/* Our Story Section */}
       <section
-        className="w-full py-20 lg:py-24 bg-surface-container-low relative"
+        className="w-full py-16 sm:py-20 lg:py-24 bg-surface-container-low relative"
         id="our-story"
       >
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             {/* Side Visual */}
             <div className="lg:col-span-5 order-2 lg:order-1 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_45px_-20px_rgba(11,25,44,0.2)] bg-surface-container-lowest ring-1 ring-black/[0.03]">
                 <img
-                  className="w-full h-[420px] object-cover"
+                  className="w-full h-[320px] sm:h-[420px] object-cover"
                   alt="Living room signature finish detail"
                   src={IMAGES.aboutStoryDetail}
                 />
-                <div className="p-6 bg-surface-container-lowest">
+                <div className="p-5 sm:p-6 bg-surface-container-lowest">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-[11px] text-secondary font-bold uppercase tracking-[0.12em]">
                       Our Signature Finish
@@ -289,7 +289,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({
 
               {/* Headline — tighter tracking, italic human accent */}
               <h2
-                className="text-[28px] lg:text-[40px] lg:leading-[1.15] text-on-surface
+                className="text-[24px] sm:text-[28px] lg:text-[40px] lg:leading-[1.15] text-on-surface
                  tracking-[-0.025em] mb-5 font-extrabold"
               >
                 Turning Ordinary Spaces Into Places{" "}
@@ -297,7 +297,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({
               </h2>
 
               {/* Story paragraphs — better rhythm, subtle word-emphasis */}
-              <div className="space-y-4 text-[15px] text-on-surface-variant leading-[1.75] max-w-[58ch]">
+              <div className="space-y-4 text-[14px] sm:text-[15px] text-on-surface-variant leading-[1.75] max-w-[58ch]">
                 <p>
                   Painter Contractors began in{" "}
                   <span className="font-semibold text-on-surface">2012</span>{" "}
@@ -350,7 +350,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                         check
                       </span>
                     </div>
-                    <span className="text-[13.5px] text-on-surface font-semibold leading-[1.5]">
+                    <span className="text-[13px] sm:text-[13.5px] text-on-surface font-semibold leading-[1.5]">
                       {item}
                     </span>
                   </div>
@@ -362,8 +362,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="w-full py-20 lg:py-24 bg-surface">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12">
+      <section className="w-full py-16 sm:py-20 lg:py-24 bg-surface">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14">
               <div className="inline-flex items-center gap-3 mb-3">
                 <span className="w-6 h-[1.5px] bg-secondary-container rounded-full" />
@@ -372,26 +372,26 @@ export const AboutUs: React.FC<AboutUsProps> = ({
 
                 </span>
               </div>
-            <h2 className="text-[28px] lg:text-[36px] font-extrabold text-on-surface tracking-tight mb-2">
+            <h2 className="text-[24px] sm:text-[28px] lg:text-[36px] font-extrabold text-on-surface tracking-tight mb-2">
               The Precision Standard in Every Coat
             </h2>
-            <p className="text-[15px] text-on-surface-variant m-0">
+            <p className="text-[14px] sm:text-[15px] text-on-surface-variant m-0">
               We combine structural trade discipline with creative visual flair
               so your property retains lasting elegance and increased market
               value.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {/* Card 1 */}
-            <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.05)] hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col justify-between group">
+            <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-3xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.05)] hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col justify-between group">
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-secondary-container/20 flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
                   <span className="material-symbols-outlined text-3xl">
                     format_paint
                   </span>
                 </div>
-                <h3 className="text-[20px] font-bold text-on-surface mb-2">
+                <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-2">
                   Expert Craftsmanship
                 </h3>
                 <p className="text-[14px] text-on-surface-variant leading-relaxed">
@@ -409,14 +409,14 @@ export const AboutUs: React.FC<AboutUsProps> = ({
             </div>
 
             {/* Card 2 */}
-            <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.05)] hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col justify-between group">
+            <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-3xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.05)] hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col justify-between group">
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-secondary-container/20 flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
                   <span className="material-symbols-outlined text-3xl">
                     science
                   </span>
                 </div>
-                <h3 className="text-[20px] font-bold text-on-surface mb-2">
+                <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-2">
                   Premium Materials
                 </h3>
                 <p className="text-[14px] text-on-surface-variant leading-relaxed">
@@ -434,14 +434,14 @@ export const AboutUs: React.FC<AboutUsProps> = ({
             </div>
 
             {/* Card 3 */}
-            <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.05)] hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col justify-between group">
+            <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-3xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.05)] hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col justify-between group">
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-secondary-container/20 flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
                   <span className="material-symbols-outlined text-3xl">
                     more_time
                   </span>
                 </div>
-                <h3 className="text-[20px] font-bold text-on-surface mb-2">
+                <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-2">
                   Reliable Service
                 </h3>
                 <p className="text-[14px] text-on-surface-variant leading-relaxed">
@@ -458,14 +458,14 @@ export const AboutUs: React.FC<AboutUsProps> = ({
             </div>
 
             {/* Card 4 */}
-            <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.05)] hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col justify-between group">
+            <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-3xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.05)] hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col justify-between group">
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-secondary-container/20 flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
                   <span className="material-symbols-outlined text-3xl">
                     verified_user
                   </span>
                 </div>
-                <h3 className="text-[20px] font-bold text-on-surface mb-2">
+                <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-2">
                   5-Year Warranty
                 </h3>
                 <p className="text-[14px] text-on-surface-variant leading-relaxed">
@@ -486,67 +486,67 @@ export const AboutUs: React.FC<AboutUsProps> = ({
 
       {/* Dark Navy Stats Ribbon */}
       <section className="w-full relative overflow-hidden bg-primary-container text-surface py-16">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            <div className="flex items-center gap-4 lg:gap-5 justify-start lg:justify-center">
-              <div className="w-14 h-14 rounded-2xl bg-secondary-container/15 flex items-center justify-center text-secondary-container shrink-0">
-                <span className="material-symbols-outlined text-3xl">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12 relative z-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center gap-3 sm:gap-4 lg:gap-5 justify-start lg:justify-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-secondary-container/15 flex items-center justify-center text-secondary-container shrink-0">
+                <span className="material-symbols-outlined text-2xl sm:text-3xl">
                   engineering
                 </span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[36px] lg:text-[44px] text-surface font-extrabold tracking-tight leading-none">
+              <div className="flex flex-col items-center sm:items-start">
+                <span className="text-[28px] sm:text-[36px] lg:text-[44px] text-surface font-extrabold tracking-tight leading-none">
                   500+
                 </span>
-                <span className="text-[14px] text-primary-fixed-dim mt-1">
+                <span className="text-[12px] sm:text-[14px] text-primary-fixed-dim mt-1">
                   Projects Completed
                 </span>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 lg:gap-5 justify-start lg:justify-center">
-              <div className="w-14 h-14 rounded-2xl bg-secondary-container/15 flex items-center justify-center text-secondary-container shrink-0">
-                <span className="material-symbols-outlined text-3xl">
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center gap-3 sm:gap-4 lg:gap-5 justify-start lg:justify-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-secondary-container/15 flex items-center justify-center text-secondary-container shrink-0">
+                <span className="material-symbols-outlined text-2xl sm:text-3xl">
                   sentiment_satisfied
                 </span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[36px] lg:text-[44px] text-surface font-extrabold tracking-tight leading-none">
+              <div className="flex flex-col items-center sm:items-start">
+                <span className="text-[28px] sm:text-[36px] lg:text-[44px] text-surface font-extrabold tracking-tight leading-none">
                   98%
                 </span>
-                <span className="text-[14px] text-primary-fixed-dim mt-1">
+                <span className="text-[12px] sm:text-[14px] text-primary-fixed-dim mt-1">
                   Happy Customers
                 </span>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 lg:gap-5 justify-start lg:justify-center">
-              <div className="w-14 h-14 rounded-2xl bg-secondary-container/15 flex items-center justify-center text-secondary-container shrink-0">
-                <span className="material-symbols-outlined text-3xl">
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center gap-3 sm:gap-4 lg:gap-5 justify-start lg:justify-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-secondary-container/15 flex items-center justify-center text-secondary-container shrink-0">
+                <span className="material-symbols-outlined text-2xl sm:text-3xl">
                   emoji_events
                 </span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[36px] lg:text-[44px] text-surface font-extrabold tracking-tight leading-none">
+              <div className="flex flex-col items-center sm:items-start">
+                <span className="text-[28px] sm:text-[36px] lg:text-[44px] text-surface font-extrabold tracking-tight leading-none">
                   10+
                 </span>
-                <span className="text-[14px] text-primary-fixed-dim mt-1">
+                <span className="text-[12px] sm:text-[14px] text-primary-fixed-dim mt-1">
                   Years Experience
                 </span>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 lg:gap-5 justify-start lg:justify-center">
-              <div className="w-14 h-14 rounded-2xl bg-secondary-container/15 flex items-center justify-center text-secondary-container shrink-0">
-                <span className="material-symbols-outlined text-3xl">
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center gap-3 sm:gap-4 lg:gap-5 justify-start lg:justify-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-secondary-container/15 flex items-center justify-center text-secondary-container shrink-0">
+                <span className="material-symbols-outlined text-2xl sm:text-3xl">
                   location_city
                 </span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[36px] lg:text-[44px] text-surface font-extrabold tracking-tight leading-none">
+              <div className="flex flex-col items-center sm:items-start">
+                <span className="text-[28px] sm:text-[36px] lg:text-[44px] text-surface font-extrabold tracking-tight leading-none">
                   25+
                 </span>
-                <span className="text-[14px] text-primary-fixed-dim mt-1">
+                <span className="text-[12px] sm:text-[14px] text-primary-fixed-dim mt-1">
                   Cities Served
                 </span>
               </div>
@@ -556,8 +556,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({
       </section>
 
       {/* Core Values Section */}
-      <section className="w-full py-20 lg:py-24 bg-surface">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12">
+      <section className="w-full py-16 sm:py-20 lg:py-24 bg-surface">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12">
             <div className="max-w-xl">
               <div className="inline-flex items-center gap-3 mb-3">
@@ -566,23 +566,23 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                   Our Culture
                 </span>
               </div>
-              <h2 className="text-[28px] lg:text-[40px] font-extrabold text-on-surface tracking-tight m-0">
+              <h2 className="text-[24px] sm:text-[28px] lg:text-[40px] font-extrabold text-on-surface tracking-tight m-0">
                 The Values Guiding Every Brushstroke
               </h2>
             </div>
-            <p className="text-[15px] text-on-surface-variant max-w-md mt-4 lg:mt-0 leading-relaxed">
+            <p className="text-[14px] sm:text-[15px] text-on-surface-variant max-w-md mt-4 lg:mt-0 leading-relaxed">
               We pride ourselves on transparent communication, uncompromising
               technical standards, and treating client homes with supreme
               respect.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-surface-container-low rounded-3xl p-6 lg:p-8 hover:bg-surface-container transition-colors">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+            <div className="bg-surface-container-low rounded-3xl p-5 sm:p-6 lg:p-8 hover:bg-surface-container transition-colors">
               <span className="text-3xl font-extrabold text-secondary-container mb-4 block">
                 01
               </span>
-              <h3 className="text-[20px] font-bold text-on-surface mb-2">
+              <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-2">
                 Quality First
               </h3>
               <p className="text-[14px] text-on-surface-variant leading-relaxed m-0">
@@ -591,11 +591,11 @@ export const AboutUs: React.FC<AboutUsProps> = ({
               </p>
             </div>
 
-            <div className="bg-surface-container-low rounded-3xl p-6 lg:p-8 hover:bg-surface-container transition-colors">
+            <div className="bg-surface-container-low rounded-3xl p-5 sm:p-6 lg:p-8 hover:bg-surface-container transition-colors">
               <span className="text-3xl font-extrabold text-secondary-container mb-4 block">
                 02
               </span>
-              <h3 className="text-[20px] font-bold text-on-surface mb-2">
+              <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-2">
                 Radical Honesty
               </h3>
               <p className="text-[14px] text-on-surface-variant leading-relaxed m-0">
@@ -604,11 +604,11 @@ export const AboutUs: React.FC<AboutUsProps> = ({
               </p>
             </div>
 
-            <div className="bg-surface-container-low rounded-3xl p-6 lg:p-8 hover:bg-surface-container transition-colors">
+            <div className="bg-surface-container-low rounded-3xl p-5 sm:p-6 lg:p-8 hover:bg-surface-container transition-colors">
               <span className="text-3xl font-extrabold text-secondary-container mb-4 block">
                 03
               </span>
-              <h3 className="text-[20px] font-bold text-on-surface mb-2">
+              <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-2">
                 Rock-Solid Reliability
               </h3>
               <p className="text-[14px] text-on-surface-variant leading-relaxed m-0">
@@ -617,11 +617,11 @@ export const AboutUs: React.FC<AboutUsProps> = ({
               </p>
             </div>
 
-            <div className="bg-surface-container-low rounded-3xl p-6 lg:p-8 hover:bg-surface-container transition-colors">
+            <div className="bg-surface-container-low rounded-3xl p-5 sm:p-6 lg:p-8 hover:bg-surface-container transition-colors">
               <span className="text-3xl font-extrabold text-secondary-container mb-4 block">
                 04
               </span>
-              <h3 className="text-[20px] font-bold text-on-surface mb-2">
+              <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-2">
                 Customer First
               </h3>
               <p className="text-[14px] text-on-surface-variant leading-relaxed m-0">
@@ -634,8 +634,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({
       </section>
 
       {/* Leadership & Crew */}
-      <section className="w-full py-20 lg:py-24 bg-surface-container-low">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12">
+      <section className="w-full py-16 sm:py-20 lg:py-24 bg-surface-container-low">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14">
               <div className="inline-flex items-center gap-3 mb-3">
                 <span className="w-6 h-[1.5px] bg-secondary-container rounded-full" />
@@ -643,22 +643,22 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                  Leadership &amp; Crew
                 </span>
               </div>
-            <h2 className="text-[28px] lg:text-[35px] font-extrabold text-on-surface tracking-tight mb-2">
+            <h2 className="text-[24px] sm:text-[28px] lg:text-[35px] font-extrabold text-on-surface tracking-tight mb-2">
               Meet the Craftspeople Behind the Brush
             </h2>
-            <p className="text-[15px] text-on-surface-variant m-0">
+            <p className="text-[14px] sm:text-[15px] text-on-surface-variant m-0">
               Experienced industry professionals dedicated to technical
               precision, color theory, and flawless site execution.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {TEAM_MEMBERS.map((member) => (
               <div
                 key={member.name}
                 className="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_10px_25px_-5px_rgba(11,25,44,0.05)] hover:-translate-y-1.5 transition-all flex flex-col group"
               >
-                <div className="relative overflow-hidden h-72 bg-surface-container">
+                <div className="relative overflow-hidden h-60 sm:h-72 bg-surface-container">
                   <img
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     alt={member.name}
@@ -668,8 +668,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                     {member.badge}
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-[20px] font-bold text-on-surface mb-1">
+                <div className="p-5 sm:p-6 flex flex-col flex-grow">
+                  <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-1">
                     {member.name}
                   </h3>
                   <p className="text-[12px] text-secondary font-semibold uppercase tracking-wider mb-3">
@@ -693,19 +693,19 @@ export const AboutUs: React.FC<AboutUsProps> = ({
 
       {/* Interactive Project Estimator Teaser */}
       <section className="w-full py-16 bg-surface">
-        <div className="max-w-5xl mx-auto px-6 lg:px-12">
-          <div className="bg-surface-container rounded-3xl p-8 lg:p-10 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="flex items-center gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0 shadow-md">
-                <span className="material-symbols-outlined text-3xl">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-5xl lg:px-12">
+          <div className="bg-surface-container rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 text-center lg:text-left">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0 shadow-md">
+                <span className="material-symbols-outlined text-2xl sm:text-3xl">
                   calculate
                 </span>
               </div>
               <div>
-                <h3 className="text-[20px] font-bold text-on-surface mb-1">
+                <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-1">
                   Curious About Your Project Cost?
                 </h3>
-                <p className="text-[15px] text-on-surface-variant m-0">
+                <p className="text-[14px] sm:text-[15px] text-on-surface-variant m-0">
                   Get a ballpark estimate in 60 seconds with our instant room
                   &amp; square footage calculator.
                 </p>
@@ -724,8 +724,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({
 
       {/* Bottom CTA Banner */}
       <section className="w-full py-16 pb-24 bg-surface">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12">
-          <div className="relative bg-primary-container rounded-[2.5rem] overflow-hidden text-surface shadow-2xl p-8 sm:p-12 lg:p-16">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
+          <div className="relative bg-primary-container rounded-[2.5rem] overflow-hidden text-surface shadow-2xl p-6 sm:p-12 lg:p-16">
             <div className="absolute -right-16 -top-16 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute -left-16 -bottom-16 w-80 h-80 bg-tertiary-container/50 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -736,11 +736,11 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                     format_paint
                   </span>
                 </div>
-                <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] lg:leading-[64px] font-extrabold text-surface tracking-tight mb-4">
+                <h2 className="text-[28px] sm:text-[32px] lg:text-[56px] lg:leading-[64px] font-extrabold text-surface tracking-tight mb-4">
                   Ready to Transform <br className="hidden sm:inline" />
                   Your Space?
                 </h2>
-                <p className="text-[18px] text-primary-fixed-dim max-w-xl mb-8 leading-relaxed">
+                <p className="text-[16px] sm:text-[18px] text-primary-fixed-dim max-w-xl mb-8 leading-relaxed">
                   Book a complimentary in-person walkthrough and professional
                   color consultation. Let's make your walls vibrant, fresh, and
                   beautiful.
@@ -748,7 +748,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                 <div className="flex flex-wrap items-center gap-4">
                   <button
                     onClick={onRequestQuote}
-                    className="inline-flex items-center justify-center gap-2 bg-secondary-container text-on-secondary-container text-[14px] font-bold px-8 py-4 rounded-full hover:bg-secondary-fixed transition-all shadow-lg hover:-translate-y-0.5 cursor-pointer border-none"
+                    className="inline-flex items-center justify-center gap-2 bg-secondary-container text-on-secondary-container text-[14px] font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full hover:bg-secondary-fixed transition-all shadow-lg hover:-translate-y-0.5 cursor-pointer border-none"
                   >
                     <span>Request a Free Quote</span>
                     <span className="material-symbols-outlined text-lg">
@@ -770,7 +770,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({
               </div>
 
               {/* Mini Testimonial Quote */}
-              <div className="lg:col-span-4 bg-inverse-surface/60 backdrop-blur-md rounded-2xl p-6 border border-surface/5">
+              <div className="lg:col-span-4 bg-inverse-surface/60 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-surface/5">
                 <div className="flex items-center gap-1 text-secondary-container mb-3">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <span
@@ -782,13 +782,13 @@ export const AboutUs: React.FC<AboutUsProps> = ({
                     </span>
                   ))}
                 </div>
-                <p className="text-[14px] text-surface-variant italic mb-4 leading-relaxed">
+                <p className="text-[13px] sm:text-[14px] text-surface-variant italic mb-4 leading-relaxed">
                   "Painter Contractors transformed our entire 3-story
                   headquarters in under five days without a drop of spilled
                   paint or business interruption. Simply world-class."
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-sm">
+                  <div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-sm shrink-0">
                     TL
                   </div>
                   <div>

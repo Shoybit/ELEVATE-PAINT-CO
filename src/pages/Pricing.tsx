@@ -70,9 +70,9 @@ export const Pricing: React.FC<PricingProps> = ({
   };
 
   return (
-    <div className="bg-[#f8f9ff] min-h-screen text-[#131c2b] pt-6 pb-20">
+    <div className="bg-[#f8f9ff] min-h-screen text-[#131c2b] pt-6 pb-20 overflow-x-hidden">
       {/* Header Banner */}
-      <section className="max-w-10/12 mx-auto px-4 sm:px-6 lg:px-8 lg:py-24 py-10 sm:py-16 text-center">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-8 pt-24 sm:pt-28 lg:pt-24 pb-10 sm:pb-16 lg:pb-24 text-center">
 <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#131c2b] mb-5 font-headline leading-[1.15] sm:leading-[1.1]">
   Transparent Investment. <br />
   <span className="relative inline-block text-secondary-container">
@@ -87,10 +87,10 @@ export const Pricing: React.FC<PricingProps> = ({
       </section>
 
       {/* 3 Core Packages */}
-      <section className="max-w-10/12 mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-8 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {/* Package 1: Essential Refresh */}
-          <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
               <div className="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
                 Essential Refresh
@@ -164,8 +164,8 @@ export const Pricing: React.FC<PricingProps> = ({
           </div>
 
           {/* Package 2: Full Transformation (Popular) */}
-          <div className="bg-gradient-to-b from-white to-[#fffbf7] rounded-3xl p-8 border-2 border-[#fea619] shadow-xl relative flex flex-col justify-between transform lg:-translate-y-2">
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#fea619] text-white text-xs font-extrabold uppercase px-4 py-1 rounded-full shadow-md">
+          <div className="bg-gradient-to-b from-white to-[#fffbf7] rounded-3xl p-6 sm:p-8 border-2 border-[#fea619] shadow-xl relative flex flex-col justify-between transform lg:-translate-y-2">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#fea619] text-white text-xs font-extrabold uppercase px-4 py-1 rounded-full shadow-md whitespace-nowrap">
               Most Popular Choice
             </div>
             <div>
@@ -242,7 +242,7 @@ export const Pricing: React.FC<PricingProps> = ({
           </div>
 
           {/* Package 3: Architectural & Commercial */}
-          <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
               <div className="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
                 Architectural & Commercial
@@ -319,8 +319,8 @@ export const Pricing: React.FC<PricingProps> = ({
       </section>
 
       {/* Interactive Live Cost Estimator Calculator */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-lg">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-5xl lg:px-8 mb-16 sm:mb-24">
+        <div className="bg-white rounded-3xl p-5 sm:p-10 border border-slate-200 shadow-lg">
           <div className="text-center max-w-xl mx-auto mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-[#fea619]">
               Instant Interactive Tool
@@ -353,7 +353,7 @@ export const Pricing: React.FC<PricingProps> = ({
                       key={t.id}
                       type="button"
                       onClick={() => setProjectType(t.id as any)}
-                      className={`py-2.5 px-3 rounded-xl text-xs font-bold transition-all ${
+                      className={`py-2.5 px-2 sm:px-3 rounded-xl text-[11px] sm:text-xs font-bold transition-all ${
                         projectType === t.id
                           ? "bg-[#131c2b] text-white shadow-md"
                           : "bg-slate-100 text-slate-600 hover:bg-slate-200"
@@ -435,14 +435,14 @@ export const Pricing: React.FC<PricingProps> = ({
                       key={p.id}
                       type="button"
                       onClick={() => setPrepLevel(p.id as any)}
-                      className={`p-2.5 rounded-xl border text-left transition-all ${
+                      className={`p-2 sm:p-2.5 rounded-xl border text-left transition-all ${
                         prepLevel === p.id
                           ? "border-[#fea619] bg-[#fffbf7] text-[#131c2b] shadow-sm"
                           : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
                       }`}
                     >
-                      <div className="text-xs font-bold">{p.title}</div>
-                      <div className="text-[10px] text-slate-400">{p.desc}</div>
+                      <div className="text-[11px] sm:text-xs font-bold">{p.title}</div>
+                      <div className="text-[9px] sm:text-[10px] text-slate-400">{p.desc}</div>
                     </button>
                   ))}
                 </div>
@@ -475,14 +475,14 @@ export const Pricing: React.FC<PricingProps> = ({
                       key={tier.id}
                       type="button"
                       onClick={() => setPaintTier(tier.id as any)}
-                      className={`p-2.5 rounded-xl border text-left transition-all ${
+                      className={`p-2 sm:p-2.5 rounded-xl border text-left transition-all ${
                         paintTier === tier.id
                           ? "border-[#fea619] bg-[#fffbf7] text-[#131c2b] shadow-sm"
                           : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
                       }`}
                     >
-                      <div className="text-xs font-bold">{tier.name}</div>
-                      <div className="text-[10px] text-slate-400">
+                      <div className="text-[11px] sm:text-xs font-bold">{tier.name}</div>
+                      <div className="text-[9px] sm:text-[10px] text-slate-400">
                         {tier.brand}
                       </div>
                     </button>
@@ -492,13 +492,13 @@ export const Pricing: React.FC<PricingProps> = ({
             </div>
 
             {/* Live Estimate Card */}
-            <div className="lg:col-span-5 bg-[#131c2b] rounded-3xl p-6 sm:p-8 text-white flex flex-col justify-between shadow-xl">
+            <div className="lg:col-span-5 bg-[#131c2b] rounded-3xl p-5 sm:p-8 text-white flex flex-col justify-between shadow-xl">
               <div>
-                <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+                <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-white/10 mb-4">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#fea619]">
                     Estimated Range
                   </span>
-                  <span className="text-[11px] px-2.5 py-1 bg-white/10 rounded-full font-semibold">
+                  <span className="text-[11px] px-2.5 py-1 bg-white/10 rounded-full font-semibold whitespace-nowrap">
                     Fixed Price Guarantee
                   </span>
                 </div>
@@ -559,7 +559,7 @@ export const Pricing: React.FC<PricingProps> = ({
       </section>
 
       {/* Feature Comparison Table */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8 mb-16 sm:mb-24">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold font-headline text-[#131c2b]">
             Detailed Tier Comparison
@@ -663,7 +663,7 @@ export const Pricing: React.FC<PricingProps> = ({
       </section>
 
       {/* FAQs Section */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-4xl lg:px-8 mb-16 sm:mb-24">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="text-xs font-bold uppercase tracking-widest text-[#fea619]">
             Frequently Asked Questions
@@ -687,7 +687,7 @@ export const Pricing: React.FC<PricingProps> = ({
               >
                 <button
                   onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#131c2b] hover:bg-slate-50 cursor-pointer"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#131c2b] hover:bg-slate-50 cursor-pointer"
                 >
                   <span>{faq.q}</span>
                   <div
@@ -709,7 +709,7 @@ export const Pricing: React.FC<PricingProps> = ({
                   </div>
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                  <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
                     {faq.a}
                   </div>
                 )}
@@ -720,8 +720,8 @@ export const Pricing: React.FC<PricingProps> = ({
       </section>
 
       {/* CTA Strip */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#131c2b] rounded-3xl p-8 sm:p-12 text-white text-center flex flex-col items-center">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-5xl lg:px-8">
+        <div className="bg-[#131c2b] rounded-3xl p-6 sm:p-12 text-white text-center flex flex-col items-center">
           <h2 className="text-2xl sm:text-3xl font-bold font-headline mb-3">
             Ready For Your Free, Detailed In-Home Estimate?
           </h2>
@@ -733,13 +733,13 @@ export const Pricing: React.FC<PricingProps> = ({
           <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => onNavigate("contact")}
-              className="bg-secondary-container text-on-secondary-container text-[14px] font-bold px-8 py-4 rounded-full shadow-[0_10px_25px_-5px_rgba(11,25,44,0.12)] hover:bg-secondary-fixed hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 cursor-pointer border-none"
+              className="bg-secondary-container text-on-secondary-container text-[14px] font-bold px-6 sm:px-8 py-4 rounded-full shadow-[0_10px_25px_-5px_rgba(11,25,44,0.12)] hover:bg-secondary-fixed hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 cursor-pointer border-none"
             >
               Schedule Free Walkthrough
             </button>
             <button
               onClick={() => onNavigate("projects")}
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-full text-sm font-semibold transition-all cursor-pointer"
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-6 sm:px-8 py-4 rounded-full text-sm font-semibold transition-all cursor-pointer"
             >
               Browse Recent Projects
             </button>

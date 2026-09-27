@@ -14,20 +14,15 @@ export const Home: React.FC<HomeProps> = ({
   onOpenHowItWorks,
 }) => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full overflow-x-hidden">
       {/* HERO SECTION */}
-      <section className="relative w-full overflow-hidden bg-surface pt-6 lg:pt-12  pb-16 lg:pb-28">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12 ">
+      <section className="relative w-full overflow-hidden bg-surface pt-20 sm:pt-24 lg:pt-12 pb-16 lg:pb-28">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content Column — vertically centered */}
             <div className="lg:col-span-6 flex flex-col items-start justify-center z-10">
-              <div className="inline-flex items-center gap-2 mb-4">
-                <span className="w-6 h-0.5 bg-secondary-container rounded-full"></span>
-                <span className="text-[12px] uppercase tracking-wider text-secondary font-bold">
-                  Professional Painting Services
-                </span>
-              </div>
-              <h1 className="text-[44px] leading-12.5 sm:text-[52px] sm:leading-14.5 lg:text-[64px] lg:leading-18 text-on-surface font-extrabold tracking-tight mb-6">
+
+              <h1 className="text-[32px] leading-[38px] sm:text-[44px] sm:leading-12.5 md:text-[52px] md:leading-14.5 lg:text-[64px] lg:leading-18 text-on-surface font-extrabold tracking-tight mb-6">
                 We Paint Spaces.
                 <br />
                 You Live{" "}
@@ -48,7 +43,7 @@ export const Home: React.FC<HomeProps> = ({
                   </svg>
                 </span>
               </h1>
-              <p className="text-[18px] text-on-surface-variant max-w-lg mb-8 leading-relaxed">
+              <p className="text-[16px] sm:text-[18px] text-on-surface-variant max-w-lg mb-8 leading-relaxed">
                 Quality finishes, vibrant colors, and flawless results that
                 bring your residential or commercial space to life with
                 guaranteed satisfaction.
@@ -58,7 +53,7 @@ export const Home: React.FC<HomeProps> = ({
               <div className="flex flex-wrap items-center gap-4 mb-10">
                 <button
                   onClick={() => onNavigate("services")}
-                  className="inline-flex items-center gap-3 bg-secondary-container text-on-secondary-container text-[14px] font-bold px-8 py-4 rounded-full shadow-[0_10px_25px_-5px_rgba(11,25,44,0.12)] hover:bg-secondary-fixed hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 cursor-pointer border-none"
+                  className="inline-flex items-center gap-3 bg-secondary-container text-on-secondary-container text-[14px] font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-[0_10px_25px_-5px_rgba(11,25,44,0.12)] hover:bg-secondary-fixed hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 cursor-pointer border-none"
                 >
                   <span>Explore Services</span>
                   <span className="material-symbols-outlined text-lg">
@@ -67,7 +62,7 @@ export const Home: React.FC<HomeProps> = ({
                 </button>
                 <button
                   onClick={onOpenHowItWorks}
-                  className="inline-flex items-center gap-3 bg-surface-container-lowest text-on-surface text-[14px] font-bold px-7 py-4 rounded-full shadow-sm hover:bg-surface-container transition-all duration-200 cursor-pointer border-none"
+                  className="inline-flex items-center gap-3 bg-surface-container-lowest text-on-surface text-[14px] font-bold px-5 sm:px-7 py-3.5 sm:py-4 rounded-full shadow-sm hover:bg-surface-container transition-all duration-200 cursor-pointer border-none"
                 >
                   <span className="w-7 h-7 rounded-full bg-primary-container text-surface flex items-center justify-center">
                     <span className="material-symbols-outlined text-sm ml-0.5">
@@ -98,17 +93,17 @@ export const Home: React.FC<HomeProps> = ({
                 </div>
 
                 {/* Overlay Badge: 10+ Years of Experience */}
-                <div className="absolute top-6 right-6 lg:top-14 lg:right-6 bg-primary-container text-surface-container-lowest px-5 py-3.5 rounded-2xl shadow-xl flex items-center gap-3 backdrop-blur-md">
-                  <div className="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">
-                    <span className="material-symbols-outlined text-xl">
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-14 lg:right-6 bg-primary-container text-surface-container-lowest px-3.5 sm:px-5 py-2.5 sm:py-3.5 rounded-2xl shadow-xl flex items-center gap-2.5 sm:gap-3 backdrop-blur-md">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">
+                    <span className="material-symbols-outlined text-lg sm:text-xl">
                       workspace_premium
                     </span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[18px] leading-tight font-extrabold text-surface">
+                    <span className="text-[15px] sm:text-[18px] leading-tight font-extrabold text-surface">
                       10+ Years
                     </span>
-                    <span className="text-[11px] text-primary-fixed-dim uppercase tracking-wider">
+                    <span className="text-[10px] sm:text-[11px] text-primary-fixed-dim uppercase tracking-wider">
                       of Experience
                     </span>
                   </div>
@@ -122,7 +117,7 @@ export const Home: React.FC<HomeProps> = ({
 
       {/* 4-PILL VALUE PROPOSITION FEATURE STRIP */}
       <section className="w-full relative z-20 -mt-6 lg:-mt-10 mb-16 lg:mb-24">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
             {/* Pill 1: On-Time Guarantee */}
             <div
@@ -133,7 +128,6 @@ export const Home: React.FC<HomeProps> = ({
                       hover:-translate-y-1 transition-all duration-300 ease-out
                       flex items-start gap-4 overflow-hidden"
             >
-              {/* soft warm corner glow on hover */}
               <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-[#E9D7C4]/0 group-hover:bg-[#E9D7C4]/40 blur-2xl transition-all duration-500 pointer-events-none" />
 
               <div
@@ -272,7 +266,7 @@ export const Home: React.FC<HomeProps> = ({
 
       {/* OUR PAINTING SERVICES SECTION */}
       <section className="w-full bg-surface-container-low/60 py-16 lg:py-24">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12 flex flex-col items-center">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12 flex flex-col items-center">
           {/* Section Header */}
           <div className="text-center max-w-2xl mb-14">
             <div className="inline-flex items-center gap-3 mb-3">
@@ -281,10 +275,10 @@ export const Home: React.FC<HomeProps> = ({
                 What We Do
               </span>
             </div>
-            <h2 className="text-[36px] lg:text-[44px] lg:leading-[52px] font-extrabold text-on-surface tracking-tight mb-4">
+            <h2 className="text-[28px] sm:text-[36px] lg:text-[44px] lg:leading-[52px] font-extrabold text-on-surface tracking-tight mb-4">
               Our Painting Services
             </h2>
-            <p className="text-[16px] text-on-surface-variant leading-relaxed m-0">
+            <p className="text-[15px] sm:text-[16px] text-on-surface-variant leading-relaxed m-0">
               From residential sanctuaries to sprawling corporate headquarters,
               we provide end-to-end painting solutions tailored to your unique
               architectural needs.
@@ -398,71 +392,71 @@ export const Home: React.FC<HomeProps> = ({
       <section className="w-full bg-primary-container text-inverse-on-surface relative overflow-hidden py-14 lg:py-20">
         <div className="absolute -top-20 -left-20 w-72 h-72 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-on-tertiary-container/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12 relative z-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
             {/* Metric 1 */}
-            <div className="flex items-center gap-4 lg:gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-inverse-surface flex items-center justify-center text-secondary-container shrink-0 shadow-inner">
-                <span className="material-symbols-outlined text-3xl">
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center gap-3 sm:gap-4 lg:gap-5">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-inverse-surface flex items-center justify-center text-secondary-container shrink-0 shadow-inner">
+                <span className="material-symbols-outlined text-2xl sm:text-3xl">
                   handyman
                 </span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[36px] lg:text-[42px] lg:leading-[46px] font-extrabold text-surface tracking-tight">
+              <div className="flex flex-col items-center sm:items-start">
+                <span className="text-[28px] sm:text-[36px] lg:text-[42px] lg:leading-[46px] font-extrabold text-surface tracking-tight">
                   500+
                 </span>
-                <span className="text-[13px] text-primary-fixed-dim">
+                <span className="text-[12px] sm:text-[13px] text-primary-fixed-dim">
                   Projects Completed
                 </span>
               </div>
             </div>
 
             {/* Metric 2 */}
-            <div className="flex items-center gap-4 lg:gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-inverse-surface flex items-center justify-center text-secondary-container shrink-0 shadow-inner">
-                <span className="material-symbols-outlined text-3xl">
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center gap-3 sm:gap-4 lg:gap-5">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-inverse-surface flex items-center justify-center text-secondary-container shrink-0 shadow-inner">
+                <span className="material-symbols-outlined text-2xl sm:text-3xl">
                   sentiment_very_satisfied
                 </span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[36px] lg:text-[42px] lg:leading-[46px] font-extrabold text-surface tracking-tight">
+              <div className="flex flex-col items-center sm:items-start">
+                <span className="text-[28px] sm:text-[36px] lg:text-[42px] lg:leading-[46px] font-extrabold text-surface tracking-tight">
                   98%
                 </span>
-                <span className="text-[13px] text-primary-fixed-dim">
+                <span className="text-[12px] sm:text-[13px] text-primary-fixed-dim">
                   Happy Customers
                 </span>
               </div>
             </div>
 
             {/* Metric 3 */}
-            <div className="flex items-center gap-4 lg:gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-inverse-surface flex items-center justify-center text-secondary-container shrink-0 shadow-inner">
-                <span className="material-symbols-outlined text-3xl">
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center gap-3 sm:gap-4 lg:gap-5">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-inverse-surface flex items-center justify-center text-secondary-container shrink-0 shadow-inner">
+                <span className="material-symbols-outlined text-2xl sm:text-3xl">
                   military_tech
                 </span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[36px] lg:text-[42px] lg:leading-[46px] font-extrabold text-surface tracking-tight">
+              <div className="flex flex-col items-center sm:items-start">
+                <span className="text-[28px] sm:text-[36px] lg:text-[42px] lg:leading-[46px] font-extrabold text-surface tracking-tight">
                   10+
                 </span>
-                <span className="text-[13px] text-primary-fixed-dim">
+                <span className="text-[12px] sm:text-[13px] text-primary-fixed-dim">
                   Years of Experience
                 </span>
               </div>
             </div>
 
             {/* Metric 4 */}
-            <div className="flex items-center gap-4 lg:gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-inverse-surface flex items-center justify-center text-secondary-container shrink-0 shadow-inner">
-                <span className="material-symbols-outlined text-3xl">
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left sm:items-center gap-3 sm:gap-4 lg:gap-5">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-inverse-surface flex items-center justify-center text-secondary-container shrink-0 shadow-inner">
+                <span className="material-symbols-outlined text-2xl sm:text-3xl">
                   location_city
                 </span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[36px] lg:text-[42px] lg:leading-[46px] font-extrabold text-surface tracking-tight">
+              <div className="flex flex-col items-center sm:items-start">
+                <span className="text-[28px] sm:text-[36px] lg:text-[42px] lg:leading-[46px] font-extrabold text-surface tracking-tight">
                   25+
                 </span>
-                <span className="text-[13px] text-primary-fixed-dim">
+                <span className="text-[12px] sm:text-[13px] text-primary-fixed-dim">
                   Cities Served
                 </span>
               </div>
@@ -473,7 +467,7 @@ export const Home: React.FC<HomeProps> = ({
 
       {/* WHY CHOOSE US & CTA SPLIT SECTION */}
       <section className="w-full py-16 lg:py-28 bg-surface">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
             {/* Left: Why Choose Us & Armchair Vignette */}
             <div className="lg:col-span-6 flex flex-col">
@@ -483,7 +477,7 @@ export const Home: React.FC<HomeProps> = ({
                   Why Choose Us
                 </span>
               </div>
-              <h2 className="text-[32px] lg:text-[42px] lg:leading-[50px] font-extrabold text-on-surface tracking-tight mb-8">
+              <h2 className="text-[26px] sm:text-[32px] lg:text-[42px] lg:leading-[50px] font-extrabold text-on-surface tracking-tight mb-8">
                 We Bring{" "}
                 <span className="decoration-secondary-container decoration-wavy decoration-2">
                   Color
@@ -505,7 +499,7 @@ export const Home: React.FC<HomeProps> = ({
                         check
                       </span>
                     </div>
-                    <span className="text-[16px] text-on-surface font-semibold">
+                    <span className="text-[15px] sm:text-[16px] text-on-surface font-semibold">
                       {item}
                     </span>
                   </div>
@@ -524,20 +518,20 @@ export const Home: React.FC<HomeProps> = ({
 
             {/* Right: Navy CTA Promo Box */}
             <div className="lg:col-span-6">
-              <div className="relative rounded-3xl bg-primary-container p-8 lg:p-14 overflow-hidden shadow-[0_25px_50px_-12px_rgba(11,25,44,0.35)] flex flex-col items-start justify-between min-h-[460px]">
+              <div className="relative rounded-3xl bg-primary-container p-6 sm:p-8 lg:p-14 overflow-hidden shadow-[0_25px_50px_-12px_rgba(11,25,44,0.35)] flex flex-col items-start justify-between min-h-[400px] sm:min-h-[460px]">
                 <div className="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/15 rounded-full blur-2xl pointer-events-none"></div>
 
-                <div className="w-16 h-16 rounded-2xl bg-secondary-container/20 border-none text-secondary-container flex items-center justify-center mb-8">
-                  <span className="material-symbols-outlined text-3xl">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-secondary-container/20 border-none text-secondary-container flex items-center justify-center mb-6 sm:mb-8">
+                  <span className="material-symbols-outlined text-2xl sm:text-3xl">
                     brush
                   </span>
                 </div>
 
                 <div className="relative z-10 max-w-md mb-8">
-                  <h3 className="text-[30px] lg:text-[40px] lg:leading-[48px] font-bold text-surface mb-4">
+                  <h3 className="text-[24px] sm:text-[30px] lg:text-[40px] lg:leading-[48px] font-bold text-surface mb-4">
                     Ready to Transform Your Space?
                   </h3>
-                  <p className="text-[16px] text-primary-fixed-dim leading-relaxed">
+                  <p className="text-[15px] sm:text-[16px] text-primary-fixed-dim leading-relaxed">
                     Let's make your walls beautiful, protected, and inspiring.
                     Reach out today for a free, transparent in-person quote.
                   </p>

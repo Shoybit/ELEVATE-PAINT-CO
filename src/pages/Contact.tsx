@@ -64,11 +64,11 @@ export const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
   };
 
   return (
-    <div className="bg-[#f8f9ff] min-h-screen text-[#131c2b] pt-6 pb-20">
+    <div className="bg-[#f8f9ff] min-h-screen text-[#131c2b] pt-6 pb-20 overflow-x-hidden">
       {/* Header Banner */}
-      <section className="max-w-10/12 mx-auto px-4 sm:px-6 lg:px-8 lg:py-24 py-10 sm:py-16 text-center">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-8 pt-24 sm:pt-28 lg:pt-24 pb-10 sm:pb-16 lg:pb-24 text-center">
 <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#131c2b] mb-4 font-headline leading-[1.15] sm:leading-[1.1]">
-  Let’s Bring Your Vision <br />
+  Let's Bring Your Vision <br />
   <span className="relative inline-block text-[#fea619]">
     To Life.
   </span>
@@ -79,7 +79,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
         </p>
       </section>
 
-      <section className="max-w-10/12 mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-8 mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Column: Direct Details & Process */}
           <div className="lg:col-span-5 space-y-6">

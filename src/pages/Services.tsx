@@ -159,27 +159,21 @@ export const Services: React.FC<ServicesProps> = ({
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full overflow-x-hidden">
       {/* Top Decorative Paint Splashes & Header Banner */}
-      <section className="relative w-full overflow-hidden bg-surface pt-10 pb-16 lg:pb-24">
+      <section className="relative w-full overflow-hidden bg-surface pt-24 sm:pt-28 lg:pt-32 pb-16 lg:pb-24">
         <div className="absolute -top-16 -right-16 w-96 h-96 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
         <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-surface-variant/40 blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12 relative z-10">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12 relative z-10">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/15 text-secondary mb-4 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
-              <span className="text-[12px] uppercase tracking-wider font-bold">
-                Our Expertise &amp; Craftsmanship
-              </span>
-            </div>
-            <h1 className="text-[40px] lg:text-[56px] lg:leading-[64px] font-extrabold text-on-surface tracking-tight mb-6">
+            <h1 className="text-3xl leading-[36px] sm:text-[40px] sm:leading-[48px] lg:text-[56px] lg:leading-[64px] font-extrabold text-on-surface tracking-tight mb-6">
               Comprehensive Painting Services{" "}
               <span className="relative inline-block text-secondary-container">
                 Tailored To You.
               </span>
             </h1>
-            <p className="text-[18px] text-on-surface-variant leading-relaxed m-0">
+            <p className="text-[16px] sm:text-[18px] text-on-surface-variant leading-relaxed m-0">
               From full residential interior refresh to heavy-duty commercial
               coatings, our licensed painters bring precision brushwork,
               zero-mess protocols, and a comprehensive 5-year quality guarantee.
@@ -201,7 +195,7 @@ export const Services: React.FC<ServicesProps> = ({
                     onClick={() =>
                       setSelectedFilter(pill.id as ServiceCategory)
                     }
-                    className={`px-6 py-2.5 rounded-full text-[14px] font-bold transition-all border-none cursor-pointer ${
+                    className={`px-5 sm:px-6 py-2.5 rounded-full text-[13px] sm:text-[14px] font-bold transition-all border-none cursor-pointer ${
                       isActive
                         ? "bg-primary-container text-surface shadow-md hover:-translate-y-0.5"
                         : "bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high shadow-sm"
@@ -218,13 +212,13 @@ export const Services: React.FC<ServicesProps> = ({
 
       {/* Detailed Services Grid Section */}
       <section className="w-full bg-surface-container-low py-16 lg:py-24">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
               <span className="text-[#fea619] font-bold uppercase tracking-widest block mb-2">
                 Our Painting Services
               </span>
-              <h2 className="text-[32px] lg:text-[40px] font-extrabold text-on-surface tracking-tight m-0">
+              <h2 className="text-[26px] sm:text-[32px] lg:text-[40px] font-extrabold text-on-surface tracking-tight m-0">
                 Precision Craft Across Every Surface
               </h2>
             </div>
@@ -236,13 +230,13 @@ export const Services: React.FC<ServicesProps> = ({
           </div>
 
           {/* 6-Card Bento/Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filteredServices.map((service) => (
               <div
                 key={service.id}
                 className="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_10px_25px_-5px_rgba(11,25,44,0.06)] hover:shadow-[0_20px_35px_-5px_rgba(11,25,44,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col"
               >
-                <div className="relative w-full h-56 overflow-hidden bg-surface-container">
+                <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-surface-container">
                   <img
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     alt={service.title}
@@ -253,24 +247,24 @@ export const Services: React.FC<ServicesProps> = ({
                   </span>
                 </div>
 
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-[20px] font-bold text-on-surface group-hover:text-secondary-container transition-colors mb-3">
+                <div className="p-6 sm:p-8 flex flex-col flex-grow">
+                  <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface group-hover:text-secondary-container transition-colors mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-[15px] text-on-surface-variant mb-6 flex-grow leading-relaxed">
+                  <p className="text-[14px] sm:text-[15px] text-on-surface-variant mb-6 flex-grow leading-relaxed">
                     {service.description}
                   </p>
                   <ul className="space-y-2.5 mb-6 text-on-surface-variant text-[13px] list-none p-0">
                     {service.bullets.map((bullet, idx) => (
-                      <li key={idx} className="flex items-center gap-2.5">
-                        <span className="material-symbols-outlined text-secondary-container text-base shrink-0">
+                      <li key={idx} className="flex items-start gap-2.5">
+                        <span className="material-symbols-outlined text-secondary-container text-base shrink-0 mt-0.5">
                           check_circle
                         </span>
                         <span>{bullet}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="pt-4 border-t border-surface-container flex items-center justify-between mt-auto">
+                  <div className="pt-4 border-t border-surface-container flex flex-wrap items-center justify-between gap-3 mt-auto">
                     <button
                       onClick={() => {
                         if (service.isVisualizer) {
@@ -286,7 +280,7 @@ export const Services: React.FC<ServicesProps> = ({
                         arrow_forward
                       </span>
                     </button>
-                    <span className="text-[11px] px-2.5 py-1 rounded-md bg-surface-container font-semibold text-on-surface-variant">
+                    <span className="text-[11px] px-2.5 py-1 rounded-md bg-surface-container font-semibold text-on-surface-variant whitespace-nowrap">
                       {service.pricingBadge}
                     </span>
                   </div>
@@ -299,12 +293,12 @@ export const Services: React.FC<ServicesProps> = ({
 
       {/* Step-by-Step 'Our Flawless Process' Section */}
       <section className="w-full bg-surface py-20 lg:py-28 relative overflow-hidden">
-        <div className="max-w-10/12 mx-auto px-6 lg:px-12 relative z-10">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-[12px] text-secondary font-bold uppercase tracking-widest block mb-2">
               How We Work
             </span>
-            <h2 className="text-[32px] lg:text-[40px] font-extrabold text-on-surface mb-4">
+            <h2 className="text-[26px] sm:text-[32px] lg:text-[40px] font-extrabold text-on-surface mb-4">
               Our 4-Step Flawless Process
             </h2>
             <p className="text-[15px] text-on-surface-variant leading-relaxed m-0">
@@ -313,19 +307,19 @@ export const Services: React.FC<ServicesProps> = ({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative">
             {/* Step 1 */}
             <div
               onClick={onOpenHowItWorks}
-              className="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.04)] relative flex flex-col group hover:-translate-y-1 transition-transform cursor-pointer"
+              className="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.04)] relative flex flex-col group hover:-translate-y-1 transition-transform cursor-pointer"
             >
               <div className="w-14 h-14 rounded-2xl bg-secondary-container text-on-secondary-container text-[20px] flex items-center justify-center font-bold mb-6 shadow-sm">
                 01
               </div>
-              <h3 className="text-[20px] font-bold text-on-surface mb-3">
+              <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-3">
                 Free In-Home Scope
               </h3>
-              <p className="text-[15px] text-on-surface-variant leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-on-surface-variant leading-relaxed">
                 We inspect wall textures, measure laser-accurate square
                 footages, inspect moisture levels, and give you an itemized
                 fixed-price proposal.
@@ -339,15 +333,15 @@ export const Services: React.FC<ServicesProps> = ({
             {/* Step 2 */}
             <div
               onClick={onOpenHowItWorks}
-              className="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.04)] relative flex flex-col group hover:-translate-y-1 transition-transform cursor-pointer"
+              className="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.04)] relative flex flex-col group hover:-translate-y-1 transition-transform cursor-pointer"
             >
               <div className="w-14 h-14 rounded-2xl bg-surface-container text-on-surface text-[20px] flex items-center justify-center font-bold mb-6 shadow-sm group-hover:bg-primary-container group-hover:text-surface transition-colors">
                 02
               </div>
-              <h3 className="text-[20px] font-bold text-on-surface mb-3">
+              <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-3">
                 Surface Prep &amp; Shield
               </h3>
-              <p className="text-[15px] text-on-surface-variant leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-on-surface-variant leading-relaxed">
                 80% of paint longevity is preparation. We protect all floors,
                 mask trims, patch drywall holes, and prime for absolute paint
                 adhesion.
@@ -361,15 +355,15 @@ export const Services: React.FC<ServicesProps> = ({
             {/* Step 3 */}
             <div
               onClick={onOpenHowItWorks}
-              className="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.04)] relative flex flex-col group hover:-translate-y-1 transition-transform cursor-pointer"
+              className="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.04)] relative flex flex-col group hover:-translate-y-1 transition-transform cursor-pointer"
             >
               <div className="w-14 h-14 rounded-2xl bg-surface-container text-on-surface text-[20px] flex items-center justify-center font-bold mb-6 shadow-sm group-hover:bg-primary-container group-hover:text-surface transition-colors">
                 03
               </div>
-              <h3 className="text-[20px] font-bold text-on-surface mb-3">
+              <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-3">
                 Precision Application
               </h3>
-              <p className="text-[15px] text-on-surface-variant leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-on-surface-variant leading-relaxed">
                 Our trade certified painters apply two continuous premium coats
                 using specialized roller and spray equipment for an even,
                 saturated luster.
@@ -383,15 +377,15 @@ export const Services: React.FC<ServicesProps> = ({
             {/* Step 4 */}
             <div
               onClick={onOpenHowItWorks}
-              className="bg-surface-container-lowest p-8 rounded-2xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.04)] relative flex flex-col group hover:-translate-y-1 transition-transform cursor-pointer"
+              className="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-[0_10px_25px_-5px_rgba(11,25,44,0.04)] relative flex flex-col group hover:-translate-y-1 transition-transform cursor-pointer"
             >
               <div className="w-14 h-14 rounded-2xl bg-secondary text-surface text-[20px] flex items-center justify-center font-bold mb-6 shadow-sm">
                 04
               </div>
-              <h3 className="text-[20px] font-bold text-on-surface mb-3">
+              <h3 className="text-[18px] sm:text-[20px] font-bold text-on-surface mb-3">
                 Walkthrough &amp; Signoff
               </h3>
-              <p className="text-[15px] text-on-surface-variant leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-on-surface-variant leading-relaxed">
                 We clean thoroughly, remove all tape and plastic, and conduct a
                 detailed room-by-room walkthrough with you before certifying the
                 5-year warranty.
@@ -406,8 +400,8 @@ export const Services: React.FC<ServicesProps> = ({
       </section>
 
       {/* Interactive Navy Banner with Instant Cost Estimator */}
-      <section className="w-full max-w-10/12 mx-auto px-6 lg:px-12 pb-20 lg:pb-28">
-        <div className="relative w-full rounded-3xl bg-primary-container text-inverse-on-surface overflow-hidden shadow-[0_25px_50px_-12px_rgba(11,25,44,0.35)] p-8 md:p-14 lg:p-16">
+      <section className="w-full max-w-full mx-auto px-4 sm:px-6 lg:max-w-10/12 lg:px-12 pb-20 lg:pb-28">
+        <div className="relative w-full rounded-3xl bg-primary-container text-inverse-on-surface overflow-hidden shadow-[0_25px_50px_-12px_rgba(11,25,44,0.35)] p-6 sm:p-8 md:p-14 lg:p-16">
           {/* Decorative Brush Stroke Illustration */}
           <svg
             className="absolute top-0 right-0 w-80 lg:w-[460px] h-full text-secondary-container/10 pointer-events-none"
@@ -434,11 +428,11 @@ export const Services: React.FC<ServicesProps> = ({
                 </span>
                 <span>Instant Estimator</span>
               </div>
-              <h2 className="text-[32px] lg:text-[48px] font-extrabold text-surface tracking-tight mb-4">
+              <h2 className="text-[26px] sm:text-[32px] lg:text-[48px] font-extrabold text-surface tracking-tight mb-4">
                 Know Your Project Cost in Under{" "}
                 <span className="text-secondary-container">60 Seconds</span>
               </h2>
-              <p className="text-[18px] text-primary-fixed-dim mb-8 max-w-xl leading-relaxed">
+              <p className="text-[16px] sm:text-[18px] text-primary-fixed-dim mb-8 max-w-xl leading-relaxed">
                 No unexpected fees or hidden markups. Enter your room dimensions
                 or approximate square footage to view transparent materials and
                 labor ranges.
@@ -490,19 +484,19 @@ export const Services: React.FC<ServicesProps> = ({
 
             {/* Right Column: Live Interactive Quick Calculator Card */}
             <div className="lg:col-span-5">
-              <div className="bg-surface-container-lowest text-on-surface p-6 sm:p-8 rounded-2xl shadow-2xl">
-                <div className="flex items-center justify-between mb-6 pb-4 border-b border-surface-container">
+              <div className="bg-surface-container-lowest text-on-surface p-5 sm:p-8 rounded-2xl shadow-2xl">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-6 pb-4 border-b border-surface-container">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                    <div className="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0">
                       <span className="material-symbols-outlined text-lg">
                         tune
                       </span>
                     </div>
-                    <h4 className="text-[16px] font-bold text-on-surface m-0">
+                    <h4 className="text-[15px] sm:text-[16px] font-bold text-on-surface m-0">
                       Quick Cost Calculator
                     </h4>
                   </div>
-                  <span className="text-[11px] text-secondary font-bold">
+                  <span className="text-[11px] text-secondary font-bold whitespace-nowrap">
                     Standard Spec
                   </span>
                 </div>
@@ -540,7 +534,7 @@ export const Services: React.FC<ServicesProps> = ({
                             setScopeType(btn.id as "1" | "3" | "6");
                             setScopeName(btn.fullName);
                           }}
-                          className={`py-2 px-3 rounded-lg text-[12px] font-bold transition-all border-none cursor-pointer ${
+                          className={`py-2 px-2 sm:px-3 rounded-lg text-[11px] sm:text-[12px] font-bold transition-all border-none cursor-pointer ${
                             scopeType === btn.id
                               ? "bg-secondary-container text-on-secondary-container shadow-sm"
                               : "bg-surface-container text-on-surface hover:bg-surface-container-high"
@@ -577,8 +571,8 @@ export const Services: React.FC<ServicesProps> = ({
                     <span className="text-[11px] text-on-surface-variant uppercase font-bold tracking-wider">
                       Estimated Project Range
                     </span>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-[28px] text-on-surface font-extrabold">
+                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                      <span className="text-[24px] sm:text-[28px] text-on-surface font-extrabold">
                         {formattedEstimate}
                       </span>
                       <span className="text-[13px] text-on-surface-variant">
@@ -590,7 +584,7 @@ export const Services: React.FC<ServicesProps> = ({
                   <button
                     type="button"
                     onClick={handleLockEstimate}
-                    className="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-xl text-[14px] font-bold hover:bg-secondary hover:text-on-secondary transition-colors cursor-pointer border-none"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-xl text-[13px] sm:text-[14px] font-bold hover:bg-secondary hover:text-on-secondary transition-colors cursor-pointer border-none whitespace-nowrap"
                   >
                     <span>Lock In This Estimate</span>
                     <span className="material-symbols-outlined text-base">
